@@ -19,17 +19,6 @@ pipeline{
             }
         }
 
-        stage('sonar analysis'){
-            steps{
-                    withSonarQubeEnv('sonarcube'){
-                    withMaven(maven:'maven'){
-                        bat 'mvn sonar:sonar'
-                            }
-
-                }
-                }
-            }
-
         stage('maven test'){
             steps{
                 bat 'mvn test'
@@ -57,7 +46,7 @@ pipeline{
           "files": [
             {
               "pattern": "target/*.jar",
-              "target": "art-doc-dev-loc"
+              "target": "maven1"
             }
          ]
     }''',
