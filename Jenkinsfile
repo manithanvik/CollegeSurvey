@@ -63,7 +63,7 @@ pipeline{
             from: '',
              replyTo: '', 
              subject: 'pipeline executed successfully', 
-             to: 'bharath.velisala@gmail.com'
+             to: 'mros47567@gmail.com'
          }
      }
     }
